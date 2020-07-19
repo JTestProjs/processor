@@ -1,0 +1,30 @@
+{% extends "pdf_processor/base.html" %}
+{% block content %}
+{% load static %}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+            <form>
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <label for="inputFromDate">From:</label>
+                        <input type="date" class="form-control" id="inputFromDate">
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="inputToDate">To:</label>
+                        <input type="date" class="form-control" id="inputToDate" >
+                    </div>
+                </div>
+                <button type="button" onclick="handleRequest();"class="btn btn-primary px-4 float-right">Done</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function handleRequest() {
+        alert("Done");
+    }
+</script>
+
+{% endblock %}
