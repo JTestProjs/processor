@@ -2,27 +2,27 @@
 {% block content %}
 {% load static %}
 <div class="container py-5">
+    <form action="process/" method="POST">
+    {% csrf_token %}
     <div class="row">
         <div class="col-md-10 mx-auto">
             <form>
                 <div class="form-group row">
-                    <div class="col-sm-6">
-                        <label for="inputFromDate">From:</label>
-                        <input type="date" class="form-control" id="inputFromDate">
-                    </div>
-                    <div class="col-sm-6">
-                        <label for="inputToDate">To:</label>
-                        <input type="date" class="form-control" id="inputToDate" >
+                    <div class="col-sm-12">
+                        <label for="inputFromDate">Choose Date: </label>
+                        <input type="date" name="fromDate" class="form-control" id="inputFromDate">
                     </div>
                 </div>
-                <button type="button" onclick="handleRequest();"class="btn btn-primary px-4 float-right">Done</button>
+                <button type="submit" onclick="handleRequest(event);"class="btn btn-primary px-4 float-right">Done</button>
             </form>
         </div>
     </div>
+    </form>
 </div>
 
 <script>
-    function handleRequest() {
+    function handleRequest(e) {
+        //e.preventDefault();
         alert("Done");
     }
 </script>
