@@ -18,8 +18,8 @@ def get_date(d: str, second_date: bool):
         m = int(month) + 3
         if m > 12:
             m = m - 12
+            year = int(year) + 1
         month = months[m]
-        year = int(year) + 1
     else:
         month = months[int(month)]
     return '{} {}, {}'.format(month, int(day), year)
