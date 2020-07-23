@@ -34,9 +34,9 @@ def processor(request):
     packet = io.BytesIO()
     # create a new PDF with Reportlab
     can = canvas.Canvas(packet, pagesize=letter)
-    can.setFont('Helvetica-Bold', 9.3)
+    can.setFont('Helvetica-Bold', 9.1)
     can.drawString(462, 122, "Smog Status:")
-    can.setFont('Helvetica', 9.3)
+    can.setFont('Helvetica', 9.1)
     can.drawString(462, 105, "{} - {}".format(first_date, second_date))
     can.save()
 

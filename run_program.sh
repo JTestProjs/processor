@@ -1,2 +1,2 @@
-source ../venv/Scripts/activate
+source ./venv/bin/activate
 nohup python manage.py runserver
