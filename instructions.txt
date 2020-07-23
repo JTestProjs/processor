@@ -1,5 +1,6 @@
 git clone https://github.com/JTestProjs/processor.git
 cd processor
+chmod 755 run_program.sh
 python3 -m pip install --user virtualenv
 python3 -m virtualenv venv 
 source venv/bin/activate
